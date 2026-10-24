@@ -1,0 +1,38 @@
+# ===== 依赖 / 运行时 =====
+backend/.pylibs/
+backend/.venv/
+frontend/node_modules/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.vite/
+dist/
+
+# ===== 数据与密钥（绝不入库）=====
+backend/.env
+backend/.env.*.bak
+backend/*.db
+backend/*.sqlite.bak
+backend/uploads/*
+!backend/uploads/.gitkeep
+mysql-data/
+.tmp/
+*.log
+
+# ===== 打包产物（体积太大）=====
+*.zip
+分享给同事/*
+!分享给同事/本说明.txt
+!分享给同事/打开系统.html
+!分享给同事/实验室预约系统.url
+
+# ===== 编辑器 / 系统 =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.npm-cache/
+
+# �����⻺�棨���������ɣ�
+backend/data/chroma/
+

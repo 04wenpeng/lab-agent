@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>打开实验室预约系统</title>
+<style>
+  :root{--bg:#f6f7f9;--line:#e6e8ec;--fg:#1f2328;--muted:#6b7280;--dim:#9aa1ab;--accent:#4d6bfe}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:var(--bg);color:var(--fg);display:flex;align-items:center;
+       justify-content:center;font:14px/1.7 "Segoe UI","Microsoft YaHei",system-ui,sans-serif}
+  .card{width:min(560px,92vw);background:#fff;border:1px solid var(--line);border-radius:14px;
+        padding:28px 30px;box-shadow:0 14px 40px rgba(16,24,40,.08)}
+  .brand{display:flex;align-items:center;gap:9px;margin-bottom:16px}
+  .brand .logo{width:22px;height:22px;border-radius:6px;background:var(--accent)}
+  .brand b{font-size:15px}
+  h1{margin:0 0 6px;font-size:17px;font-weight:600}
+  p.tip{margin:0 0 18px;color:var(--muted);font-size:12.5px}
+  a.entry{display:flex;align-items:center;gap:10px;padding:12px 14px;margin-bottom:9px;
+          border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--fg);background:#fff}
+  a.entry:hover{border-color:var(--accent);background:#f7f9ff}
+  a.entry .name{font-weight:600;font-size:13.5px}
+  a.entry .addr{color:var(--dim);font-size:11.5px;font-family:Consolas,monospace}
+  a.entry .go{margin-left:auto;color:var(--accent);font-size:12.5px;white-space:nowrap}
+  .box{margin-top:16px;padding:12px 14px;border-radius:10px;background:#f8f9fb;border:1px solid var(--line);
+       font-size:12.5px;color:var(--muted);line-height:1.9}
+  .box b{color:var(--fg)}
+  .foot{margin-top:14px;font-size:11.5px;color:var(--dim);line-height:1.9}
+  code{background:#f3f4f6;padding:1px 5px;border-radius:4px;font-size:11.5px}
+</style></head>
+<body>
+<div class="card">
+  <div class="brand"><span class="logo"></span><b>智能实验室预约系统</b></div>
+  <h1>选择一个能打开的地址</h1>
+  <p class="tip">四个都试一下，总有能打开的。能打开的那个，以后直接存书签。</p>
+
+  <a class="entry" href="http://DESKTOP-M0B255V:5173/">
+    <span>
+      <span class="name">公司内网（主机名，推荐）</span><br>
+      <span class="addr">http://DESKTOP-M0B255V:5173</span>
+    </span>
+    <span class="go">进入 →</span>
+  </a>
+
+  <a class="entry" href="http://172.22.124.143:5173/">
+    <span>
+      <span class="name">局域网（同一 WiFi）</span><br>
+      <span class="addr">http://172.22.124.143:5173</span>
+    </span>
+    <span class="go">进入 →</span>
+  </a>
+
+  <a class="entry" href="http://26.94.195.90:5173/">
+    <span>
+      <span class="name">Radmin VPN（不在同一网络时）</span><br>
+      <span class="addr">http://26.94.195.90:5173</span>
+    </span>
+    <span class="go">进入 →</span>
+  </a>
+
+  <a class="entry" href="http://127.0.0.1:5173/">
+    <span>
+      <span class="name">本机</span><br>
+      <span class="addr">http://127.0.0.1:5173</span>
+    </span>
+    <span class="go">进入 →</span>
+  </a>
+
+  <div class="box">
+    <b>第一次用？</b>打开后点「注册账号」，默认注册为<b>学生</b>，直接就能用；登录页默认也是学生登录。<br>
+    <b>能做什么：</b>看实验室（含当前是否被占用）→ 提交预约（填使用人数）→ AI 几秒内自动审核 →
+    在我的预约里<b>修改 / 取消 / 签到</b>；右上角铃铛会提示审核结果，点铃铛底部可看全部通知。<br>
+    <b>要注意：</b>约了不去会记一次<b>违约</b>，累计到规定次数账号会被自动禁用；
+    离开始太近时不能自己取消，得找管理员。<br>
+    <b>想当管理员？</b>注册页底部小字「我是老师/管理员」，或登录后在「个人信息」页底部申请，
+    都要等主管理员审核。管理员登录请点登录页底部的「管理员登录」小字。
+  </div>
+
+  <div class="foot">
+    一个都打不开？<br>
+    ① 运行系统那台电脑要开着，服务在跑（双击那台机器上的 <code>启动项目.bat</code>）<br>
+    ② 两台电脑要在同一 WiFi，或者都装了 Radmin VPN 并加入同一个网络<br>
+    ③ IP 变了：在那台机器上 <code>ipconfig</code> 看 IPv4，改本文件里的地址
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,160 @@
+﻿/* ===== 手机端 / 小屏适配 ===== */
+/* 只在窄屏生效，桌面端完全不受影响 */
+
+@media (max-width: 768px) {
+  /* 1) 整体留白收紧 */
+  .el-main {
+    padding: 10px !important;
+  }
+  .el-card__body {
+    padding: 12px !important;
+  }
+  .el-card__header {
+    padding: 10px 12px !important;
+  }
+  .el-header {
+    padding: 0 10px !important;
+    height: 52px !important;
+  }
+
+  /* 2) 顶部标题缩小、头像名字隐藏 */
+  .app-title {
+    font-size: 16px !important;
+  }
+  .app-title img {
+    width: 28px !important;
+  }
+  .app-title-text {
+    display: none;
+  }
+  .user-name-text {
+    display: none;
+  }
+  .logout-text {
+    display: none;
+  }
+  .menu-toggle {
+    margin-right: 4px;
+    padding: 4px !important;
+  }
+
+  /* 3) 表格：字号小一点，允许左右滑动 */
+  .el-table {
+    font-size: 12px;
+  }
+  .el-table th,
+  .el-table td {
+    padding: 6px 0 !important;
+  }
+  .el-table .cell {
+    padding: 0 6px !important;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  /* 4) 弹窗、确认框占满宽度 */
+  .el-dialog {
+    width: 94% !important;
+    margin-top: 5vh !important;
+  }
+  .el-message-box {
+    width: 88% !important;
+  }
+  .el-drawer {
+    max-width: 78vw;
+  }
+
+  /* 5) 表单：标签放上面，控件占满一行 */
+  .el-form-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .el-form-item__label {
+    width: auto !important;
+    padding: 0 0 4px 0 !important;
+    text-align: left !important;
+    line-height: 1.4 !important;
+  }
+  .el-form-item__content {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+  .el-form-item__content > .el-input,
+  .el-form-item__content > .el-select,
+  .el-form-item__content > .el-textarea,
+  .el-form-item__content > .el-date-editor,
+  .el-form-item__content > .el-input-number {
+    width: 100% !important;
+  }
+
+  /* 6) 页面标题区：按钮换行、占满宽度 */
+  .page-head {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+  .head-actions {
+    margin-left: 0 !important;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px !important;
+  }
+  .head-actions .el-input,
+  .head-actions .el-select {
+    width: 100% !important;
+  }
+  .head-text h2 {
+    font-size: 17px !important;
+  }
+
+  /* 7) 分页条居中一点 */
+  .pager,
+  .el-pagination {
+    justify-content: center !important;
+    flex-wrap: wrap;
+  }
+
+  /* 8) 描述列表也改成两列变一列 */
+  .el-descriptions__body .el-descriptions__table {
+    table-layout: fixed;
+  }
+}
+
+/* 超窄屏（iPhone SE 一类） */
+@media (max-width: 400px) {
+  .app-title-text {
+    font-size: 14px;
+  }
+  .el-card__body {
+    padding: 10px !important;
+  }
+}
+
+/* 9) �ֻ������ش�Ҫ�У����ϼ� class-name="hide-mobile" label-class-name="hide-mobile" ���ɣ� */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* 10) ʵ���ҿ�Ƭ�������ֻ��ϱ�̫�� */
+@media (max-width: 768px) {
+  .lab-cover,
+  .lab-img {
+    height: 120px !important;
+  }
+  .el-table__header th {
+    font-size: 12px;
+  }
+}
+
+
+/* 11) 手机上表格按列宽排布，超出的左右滑动（避免被压扁换行） */
+@media (max-width: 768px) {
+  .el-table > .el-table__inner-wrapper > .el-table__body-wrapper > table,
+  .el-table table.el-table__body,
+  .el-table table.el-table__header {
+    width: max-content !important;
+    min-width: 100% !important;
+  }
+}
